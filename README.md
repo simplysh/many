@@ -1,2 +1,2 @@
 # many
-Dumb template literal for pluralising
+Template literal for pluralising

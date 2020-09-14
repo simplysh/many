@@ -73,8 +73,17 @@ const many = (strings, ...expressions) => {
   let result = '';
 
   for (let i = 0, len = strings.length; i < len; i++) {
-    const string = strings[i];
-    const expression = expressions[i] || '';
+    let string = strings[i];
+    let expression = expressions[i] || '';
+
+    if (string.endsWith('#') && !string.endsWith('\\#')) {
+      if (typeof expression === 'number') {
+        count = expression;
+
+        string = string.slice(0, -1);
+        expression = '';
+      }
+    }
 
     result = result + pluralise(string, count) + expression;
 

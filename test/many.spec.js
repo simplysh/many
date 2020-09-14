@@ -40,6 +40,13 @@ suite('either operator', function() {
   });
 });
 
+suite('hint operator', function() {
+  test('single count', function () {
+    expect(many`We are #${1}(one)|(many)`).to.equal('We are one');
+    expect(many`We are #${5}(one)|(many)`).to.equal('We are many');
+  });
+});
+
 suite('group operator', function() {
   test('does nothing on its own', function () {
     expect(many`${1} point(less) groups?`).to.equal('1 pointless group');
@@ -52,11 +59,15 @@ suite('escape operator', function() {
     expect(many`${1} question\\?`).to.equal('1 question?');
   });
 
-  test('will escape groups', function () {
+  test('will escape group', function () {
     expect(many`${3} green \\(spring\\) onions?`).to.equal('3 green (spring) onions');
   });
 
   test('will escape either', function () {
     expect(many`${1} users? (was)|(were) subject to a\\|b testing`).to.equal('1 user was subject to a|b testing');
+  });
+
+  test('will escape number hint', function () {
+    expect(many`We are \\#${1}`).to.equal('We are #1');
   });
 });

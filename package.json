@@ -1,7 +1,7 @@
 {
   "name": "many",
   "version": "1.0.0",
-  "description": "Small tagged template for pluralising",
+  "description": "Small tagged template for writing plurals",
   "main": "many.js",
   "scripts": {
     "test": "mocha many.spec.js"

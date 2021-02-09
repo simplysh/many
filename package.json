@@ -1,0 +1,27 @@
+{
+  "name": "many",
+  "version": "1.0.0",
+  "description": "Small tagged template for pluralising",
+  "main": "many.js",
+  "scripts": {
+    "test": "mocha many.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simplysh/many.git"
+  },
+  "author": {
+    "name": "Andrei Nemes",
+    "email": "simply.andrei@gmail.com",
+    "url": "https://simply.sh"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/simplysh/many/issues"
+  },
+  "homepage": "https://github.com/simplysh/many#readme",
+  "devDependencies": {
+    "chai": "^4.3.0",
+    "mocha": "^8.2.1"
+  }
+}

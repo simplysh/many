@@ -95,5 +95,4 @@ const many = (strings, ...expressions) => {
   return result;
 }
 
-window.many = many;
-export default many;
+module.exports = many;

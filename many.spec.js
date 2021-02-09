@@ -1,4 +1,6 @@
-import many from '../many.js';
+const many = require('./many.js');
+const { suite, test } = require('mocha');
+const { expect } = require('chai');
 
 suite('many', function() {
   test('is a template literal', function () {

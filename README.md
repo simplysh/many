@@ -44,7 +44,7 @@ many`${2} things?`
 many`${1} potato(es)?`
 // 1 potato
 
-many`${1} potato(es)?`
+many`${5} potato(es)?`
 // 5 potatoes
 ```
 
